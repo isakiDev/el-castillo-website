@@ -2,12 +2,12 @@
 import Icon from "./Icon.astro";
 ---
 
-<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 px-4 py-3 shadow-xs">
-  <div class="flex items-center justify-between">
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md md:backdrop-blur-none border-b border-slate-200/80 px-4 md:px-0 py-3 md:py-0 shadow-xs md:shadow-none">
+  <div class="max-w-[1120px] mx-auto md:px-6 md:py-6 flex items-center justify-between gap-4">
     <div class="flex items-center gap-2.5">
       <img
         src="https://i.pinimg.com/236x/90/9c/a1/909ca15303f4a1f0dd0a03101856011d.jpg"
-        alt="El Castillo"
+        alt="Mecánica el Castillo"
         class="w-10 h-10 rounded-full object-cover border border-slate-200 shadow-xs"
       />
 
@@ -23,5 +23,23 @@ import Icon from "./Icon.astro";
         </p>
       </div>
     </div>
+
+    <nav
+      class="hidden md:flex items-center gap-8 text-body-sm text-steel"
+      aria-label="Navegación secundaria"
+    >
+      <a href="#servicios" class="hover:text-light-primary transition-colors">
+        Servicios
+      </a>
+      <a href="#proceso" class="hover:text-light-primary transition-colors">
+        Cómo trabajo
+      </a>
+      <a href="#ubicacion" class="hover:text-light-primary transition-colors">
+        Ubicación
+      </a>
+      <a href="#contacto" class="hover:text-light-primary transition-colors">
+        Contacto
+      </a>
+    </nav>
   </div>
 </header>
