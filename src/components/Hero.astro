@@ -5,35 +5,35 @@ import Icon from "./Icon.astro";
 <!-- Mobile -->
 <section class="md:hidden bg-white border border-slate-200 rounded-2xl p-5 shadow-xs">
   <div class="space-y-3">
-    <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-[11px] font-semibold text-emerald-700">
+    <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-semibold text-emerald-700">
       <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
       Atención directa y personalizada
     </div>
 
-    <h2 class="font-headline text-[20px] font-bold text-light-primary leading-tight tracking-tight">
+    <h1 class="font-headline text-xl font-bold text-light-primary leading-tight tracking-tight">
       Soluciones mecánicas para cuidar tu vehículo.
-    </h2>
+    </h1>
 
-    <p class="text-[13px] text-steel leading-relaxed">
+    <p class="text-sm text-steel leading-relaxed">
       Realizo trabajos de mantenimiento y reparación automotriz, adaptándome a
       tus necesidades.
     </p>
 
     <div class="grid grid-cols-2 gap-2 pt-1">
       <div class="bg-slate-50 border border-slate-100 rounded-xl p-2.5 space-y-0.5">
-        <span class="font-headline text-[12px] font-bold text-light-primary flex items-center gap-1">
-          <Icon name="home_repair_service" class="text-[16px] text-accent" />A
+        <span class="font-headline text-xs font-bold text-light-primary flex items-center gap-1">
+          <Icon name="home_repair_service" class="text-base text-accent" />A
           domicilio
         </span>
-        <span class="text-[11px] text-steel block">Comodidad donde estés</span>
+        <span class="text-xs text-steel block">Comodidad donde estés</span>
       </div>
 
       <div class="bg-slate-50 border border-slate-100 rounded-xl p-2.5 space-y-0.5">
-        <span class="font-headline text-[12px] font-bold text-light-primary flex items-center gap-1">
-          <Icon name="garage" class="text-[16px] text-blue-600" />
+        <span class="font-headline text-xs font-bold text-light-primary flex items-center gap-1">
+          <Icon name="garage" class="text-base text-blue-600" />
           Taller propio
         </span>
-        <span class="text-[11px] text-steel block">Atención en taller</span>
+        <span class="text-xs text-steel block">Atención en taller</span>
       </div>
     </div>
   </div>
@@ -48,12 +48,12 @@ import Icon from "./Icon.astro";
     <div class="lg:col-span-7 space-y-5">
       <div class="inline-flex items-center gap-2 px-3 py-1 bg-white border border-slate-200 rounded-full text-steel text-body-sm shadow-xs">
         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        <span class="font-medium text-light-primary text-[13px]">
+        <span class="font-medium text-light-primary text-sm">
           Atención directa y personalizada
         </span>
       </div>
 
-      <h1 class="font-headline text-[36px] md:text-[48px] leading-[1.15] text-light-primary font-bold tracking-tight text-balance">
+      <h1 class="font-headline text-4xl md:text-5xl leading-tight text-light-primary font-bold tracking-tight text-balance">
         Soluciones mecánicas para cuidar tu vehículo.
       </h1>
 
@@ -67,17 +67,17 @@ import Icon from "./Icon.astro";
           href={`https://wa.me/56953377432?text=${encodeURIComponent("Hola Gabriel, quisiera consultar por mi auto.")}`}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-whatsapp hover:bg-whatsapp-hover text-white font-headline text-[14px] font-bold rounded shadow-xs transition-colors"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-whatsapp hover:bg-whatsapp-hover text-white font-headline text-sm font-bold rounded shadow-xs transition-colors"
         >
-          <Icon name="chat" class="text-[20px]" />
+          <Icon name="chat" class="text-xl" />
           <span>Consultar por WhatsApp</span>
         </a>
 
         <a
           href="tel:+56953377432"
-          class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-slate-300 hover:border-light-primary text-light-primary font-headline text-[14px] font-bold rounded bg-white transition-colors"
+          class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-slate-300 hover:border-light-primary text-light-primary font-headline text-sm font-bold rounded bg-white transition-colors"
         >
-          <Icon name="call" class="text-[18px] text-steel" />
+          <Icon name="call" class="text-lg text-steel" />
           <span>+56 9 5337 7432</span>
         </a>
       </div>
@@ -87,14 +87,14 @@ import Icon from "./Icon.astro";
           <span class="font-headline font-bold text-light-primary block text-base">
             A domicilio
           </span>
-          <span class="text-[13px]">Comodidad donde estés</span>
+          <span class="text-sm">Comodidad donde estés</span>
         </div>
-        <div class="h-7 w-[1px] bg-slate-200"></div>
+        <div class="h-7 w-px bg-slate-200"></div>
         <div>
           <span class="font-headline font-bold text-light-primary block text-base">
             Taller propio
           </span>
-          <span class="text-[13px]">Atención en taller</span>
+          <span class="text-sm">Atención en taller</span>
         </div>
       </div>
     </div>
@@ -110,14 +110,14 @@ import Icon from "./Icon.astro";
             />
           </div>
           <div>
-            <span class="font-code text-[11px] font-semibold text-accent uppercase tracking-wider block">
+            <span class="font-code text-xs font-semibold text-accent uppercase tracking-wider block">
               Mecánico Titular
             </span>
             <h2 class="font-headline font-bold text-headline-sm text-light-primary leading-tight">
-              Mecánica el Castillo
+              Gabriel Castillo
             </h2>
-            <p class="text-steel text-[13px] flex items-center gap-1 mt-0.5">
-              <Icon name="location_on" class="text-[16px] text-slate-400" />
+            <p class="text-steel text-sm flex items-center gap-1 mt-0.5">
+              <Icon name="location_on" class="text-base text-slate-400" />
               Los Arregladores, San Fernando
             </p>
           </div>
@@ -128,35 +128,35 @@ import Icon from "./Icon.astro";
             <span class="text-steel flex items-center gap-2">
               <Icon
                 name="home_repair_service"
-                class="text-emerald-600 text-[18px]"
+                class="text-emerald-600 text-lg"
               />
               Modalidad Móvil
             </span>
-            <span class="font-code text-[12px] font-semibold text-light-primary">
+            <span class="font-code text-xs font-semibold text-light-primary">
               Voy a tu domicilio
             </span>
           </div>
           <div class="flex items-center justify-between p-2.5 rounded bg-slate-50 border border-slate-100">
             <span class="text-steel flex items-center gap-2">
-              <Icon name="garage" class="text-blue-600 text-[18px]" />
+              <Icon name="garage" class="text-blue-600 text-lg" />
               Taller Equipado
             </span>
-            <span class="font-code text-[12px] font-semibold text-light-primary">
+            <span class="font-code text-xs font-semibold text-light-primary">
               Atención en taller
             </span>
           </div>
           <div class="flex items-center justify-between p-2.5 rounded bg-slate-50 border border-slate-100">
             <span class="text-steel flex items-center gap-2">
-              <Icon name="verified_user" class="text-amber-600 text-[18px]" />
+              <Icon name="verified_user" class="text-amber-600 text-lg" />
               Trato Directo
             </span>
-            <span class="font-code text-[12px] font-semibold text-light-primary">
+            <span class="font-code text-xs font-semibold text-light-primary">
               Sin intermediarios
             </span>
           </div>
         </div>
 
-        <p class="text-[13px] text-slate-600 italic bg-amber-50/70 p-3 rounded border border-amber-200/60 leading-snug">
+        <p class="text-sm text-slate-600 italic bg-amber-50/70 p-3 rounded border border-amber-200/60 leading-snug">
           &#34;Trato directo con el mecánico. Te devuelvo las piezas sustituidas
           para tu tranquilidad.&#34;
         </p>
