@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-accent: #D97706;
+  --color-whatsapp: #16A34A;
+  --color-whatsapp-hover: #15803D;
+  --color-steel: #475569;
+  --color-light-primary: #0F1E2E;
+  --color-light-on-surface: #0F172A;
+
+  --font-display: "Archivo", sans-serif;
+  --font-headline: "Archivo", sans-serif;
+  --font-body: "Commissioner", sans-serif;
+  --font-label: "Commissioner", sans-serif;
+  --font-code: "Spline Sans Mono", monospace;
+}

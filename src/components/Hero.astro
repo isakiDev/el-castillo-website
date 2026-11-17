@@ -1,0 +1,39 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<section class="relative bg-white border border-slate-200 rounded-2xl p-5 shadow-xs overflow-hidden">
+  <div class="relative z-10 space-y-3">
+    <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-[11px] font-semibold text-emerald-700">
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+      Atención directa y personalizada
+    </div>
+
+    <h2 class="font-headline text-[20px] font-bold text-light-primary leading-tight tracking-tight">
+      Soluciones mecánicas para cuidar tu vehículo.
+    </h2>
+
+    <p class="text-[13px] text-steel leading-relaxed">
+      Realizo trabajos de mantenimiento y reparación automotriz, adaptándome a
+      tus necesidades.
+    </p>
+
+    <div class="grid grid-cols-2 gap-2 pt-1">
+      <div class="bg-slate-50 border border-slate-100 rounded-xl p-2.5 space-y-0.5">
+        <span class="font-headline text-[12px] font-bold text-light-primary flex items-center gap-1">
+          <Icon name="home_repair_service" class="text-[16px] text-accent" />A
+          domicilio
+        </span>
+        <span class="text-[11px] text-steel block">Comodidad donde estés</span>
+      </div>
+
+      <div class="bg-slate-50 border border-slate-100 rounded-xl p-2.5 space-y-0.5">
+        <span class="font-headline text-[12px] font-bold text-light-primary flex items-center gap-1">
+          <Icon name="garage" class="text-[16px] text-blue-600" />
+          Taller propio
+        </span>
+        <span class="text-[11px] text-steel block">Atención en taller</span>
+      </div>
+    </div>
+  </div>
+</section>

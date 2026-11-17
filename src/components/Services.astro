@@ -1,0 +1,82 @@
+---
+import ServiceCard from "./ServiceCard.astro";
+
+const createWhatsAppLink = (service: string) => {
+  const message = `Hola Gabriel, quisiera consultar por el siguiente servicio:
+
+Servicio: ${service}
+
+Datos del Vehículo:
+  Marca:
+  Modelo:
+  Año:
+
+Quedo atento a tu respuesta. ¡Gracias!`;
+
+  return `https://wa.me/56953377432?text=${encodeURIComponent(message)}`;
+};
+
+const services = [
+  {
+    icon: "oil_barrel",
+    iconClass: "bg-amber-50 text-amber-600 border-amber-200",
+    badge: "Mantenimiento",
+    badgeClass: "text-amber-700 bg-amber-50",
+    meta: "Taller / Domicilio",
+    title: "Cambio de Aceite",
+    description:
+      "Cambio de aceite del motor y revisión de los niveles de fluidos para mantener tu vehículo en buen estado.",
+    benefit: "Cuidado del motor",
+    href: createWhatsAppLink("Cambio de Aceite"),
+  },
+  {
+    icon: "disc",
+    iconClass: "bg-red-50 text-red-600 border-red-200",
+    badge: "Seguridad",
+    badgeClass: "text-red-700 bg-red-50",
+    meta: "Taller / Domicilio",
+    title: "Frenos (Pastillas y Discos)",
+    description:
+      "Revisión y reemplazo de pastillas y discos de freno para garantizar una frenada segura y eficiente.",
+    benefit: "Mayor seguridad al frenar",
+    href: createWhatsAppLink("Frenos (Pastillas y Discos)"),
+  },
+  {
+    icon: "car-front",
+    iconClass: "bg-blue-50 text-blue-600 border-blue-200",
+    badge: "Suspensión",
+    badgeClass: "text-blue-700 bg-blue-50",
+    meta: "Solo en taller",
+    title: "Cambio de Amortiguadores",
+    description:
+      "Revisión y reemplazo de amortiguadores para mejorar la estabilidad, el confort y el control del vehículo.",
+    benefit: "Mejor estabilidad",
+    href: createWhatsAppLink("Cambio de Amortiguadores"),
+  },
+  {
+    icon: "settings",
+    iconClass: "bg-indigo-50 text-indigo-600 border-indigo-200",
+    badge: "Mecánica",
+    badgeClass: "text-indigo-700 bg-indigo-50",
+    meta: "Solo en taller",
+    title: "Tren Delantero",
+    description:
+      "Diagnóstico y reparación de componentes del tren delantero para solucionar ruidos, holguras y problemas de dirección.",
+    benefit: "Mejor control y estabilidad",
+    href: createWhatsAppLink("Tren Delantero"),
+  },
+];
+---
+
+<section class="space-y-3">
+  <div class="flex items-center justify-between">
+    <h3 class="font-headline text-[16px] font-bold text-light-primary">
+      Servicios Populares
+    </h3>
+    <!-- <span class="text-[11px] font-code text-steel">Garantía 6 meses</span> -->
+  </div>
+
+  {services.map((service) => (
+    <ServiceCard {...service} />
+  ))}
+</section>

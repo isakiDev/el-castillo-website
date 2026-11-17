@@ -1,0 +1,18 @@
+---
+interface Props {
+  name: string;
+  class?: string;
+}
+
+const { name, class: className = "" } = Astro.props;
+---
+
+<svg
+  class:list={["inline-block align-middle", className]}
+  width="1em"
+  height="1em"
+  aria-hidden="true"
+  focusable="false"
+>
+  <use href={`/icons.svg#${name}`}></use>
+</svg>

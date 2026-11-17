@@ -1,0 +1,31 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<div class="grid grid-cols-2 gap-2.5">
+  <a
+    href="https://wa.me/5491123456789?text=Hola%20Carlos,%20mi%20auto%20no%20arranca,%20necesito%20auxilio"
+    class="bg-amber-50 border border-amber-200 rounded-xl p-3 flex items-center gap-2.5 active:scale-95 transition-transform"
+  >
+    <div class="w-9 h-9 rounded-2xl bg-accent text-white flex items-center justify-center shrink-0">
+      <Icon name="bolt" class="text-[20px]" />
+    </div>
+    <div>
+      <span class="font-headline text-[12px] font-bold text-light-primary block">Auxilio Hoy</span>
+      <span class="text-[11px] text-steel block">¿Batería o arranque?</span>
+    </div>
+  </a>
+
+  <a
+    href="https://wa.me/5491123456789?text=Hola%20Carlos,%20quisiera%20agendar%20un%20turno"
+    class="bg-white border border-slate-200 rounded-xl p-3 flex items-center gap-2.5 active:scale-95 transition-transform"
+  >
+    <div class="w-9 h-9 rounded-2xl bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center shrink-0">
+      <Icon name="calendar_month" class="text-[20px]" />
+    </div>
+    <div>
+      <span class="font-headline text-[12px] font-bold text-light-primary block">Agendar Turno</span>
+      <span class="text-[11px] text-steel block">Fecha y horario</span>
+    </div>
+  </a>
+</div>
