@@ -1,6 +1,6 @@
 ---
-import ServiceCard from "./ServiceCard.astro";
-import Icon from "./Icon.astro";
+import ServiceCard from"./ServiceCard.astro";
+import Icon from"./Icon.astro";
 
 const createWhatsAppLink = (service: string) => {
   const message = `Hola Gabriel, quisiera consultar por el siguiente servicio:
@@ -19,51 +19,51 @@ Quedo atent@ a tu respuesta. ¡Gracias!`;
 
 const services = [
   {
-    icon: "tune",
-    iconClass: "bg-amber-50 text-amber-600 border-amber-200",
-    badge: "Mantenimiento",
-    badgeClass: "text-amber-700 bg-amber-50",
-    meta: "Taller / Domicilio",
-    title: "Cambio de Aceite",
+    icon:"tune",
+    iconClass:"bg-amber-50 text-amber-600 border-amber-200",
+    badge:"Mantenimiento",
+    badgeClass:"text-amber-700 bg-amber-50",
+    meta:"Taller / Domicilio",
+    title:"Cambio de Aceite",
     description:
-      "Cambio de aceite del motor y revisión de los niveles de fluidos para mantener tu vehículo en buen estado.",
-    benefit: "Cuidado del motor",
+"Cambio de aceite del motor y revisión de los niveles de fluidos para mantener tu vehículo en buen estado.",
+    benefit:"Cuidado del motor",
     href: createWhatsAppLink("Cambio de Aceite"),
   },
   {
-    icon: "pan_tool",
-    iconClass: "bg-red-50 text-red-600 border-red-200",
-    badge: "Seguridad",
-    badgeClass: "text-red-700 bg-red-50",
-    meta: "Taller / Domicilio",
-    title: "Frenos (Pastillas y Discos)",
+    icon:"pan_tool",
+    iconClass:"bg-red-50 text-red-600 border-red-200",
+    badge:"Seguridad",
+    badgeClass:"text-red-700 bg-red-50",
+    meta:"Taller / Domicilio",
+    title:"Frenos (Pastillas y Discos)",
     description:
-      "Revisión y reemplazo de pastillas y discos de freno para garantizar una frenada segura y eficiente.",
-    benefit: "Mayor seguridad al frenar",
+"Revisión y reemplazo de pastillas y discos de freno para garantizar una frenada segura y eficiente.",
+    benefit:"Mayor seguridad al frenar",
     href: createWhatsAppLink("Frenos (Pastillas y Discos)"),
   },
   {
-    icon: "swap_driving_apps",
-    iconClass: "bg-blue-50 text-blue-600 border-blue-200",
-    badge: "Suspensión",
-    badgeClass: "text-blue-700 bg-blue-50",
-    meta: "Solo en taller",
-    title: "Cambio de Amortiguadores",
+    icon:"swap_driving_apps",
+    iconClass:"bg-blue-50 text-blue-600 border-blue-200",
+    badge:"Suspensión",
+    badgeClass:"text-blue-700 bg-blue-50",
+    meta:"Solo en taller",
+    title:"Cambio de Amortiguadores",
     description:
-      "Revisión y reemplazo de amortiguadores para mejorar la estabilidad, el confort y el control del vehículo.",
-    benefit: "Mejor estabilidad",
+"Revisión y reemplazo de amortiguadores para mejorar la estabilidad, el confort y el control del vehículo.",
+    benefit:"Mejor estabilidad",
     href: createWhatsAppLink("Cambio de Amortiguadores"),
   },
   {
-    icon: "home_repair_service",
-    iconClass: "bg-indigo-50 text-indigo-600 border-indigo-200",
-    badge: "Mecánica",
-    badgeClass: "text-indigo-700 bg-indigo-50",
-    meta: "Solo en taller",
-    title: "Tren Delantero",
+    icon:"home_repair_service",
+    iconClass:"bg-indigo-50 text-indigo-600 border-indigo-200",
+    badge:"Mecánica",
+    badgeClass:"text-indigo-700 bg-indigo-50",
+    meta:"Solo en taller",
+    title:"Tren Delantero",
     description:
-      "Diagnóstico y reparación de componentes del tren delantero para solucionar ruidos, holguras y problemas de dirección.",
-    benefit: "Mejor control y estabilidad",
+"Diagnóstico y reparación de componentes del tren delantero para solucionar ruidos, holguras y problemas de dirección.",
+    benefit:"Mejor control y estabilidad",
     href: createWhatsAppLink("Tren Delantero"),
   },
 ];
@@ -73,50 +73,46 @@ const services = [
   id="servicios"
   class="md:p-16 md:bg-white md:border-y md:border-slate-200/80 md:rounded"
 >
-  <!-- Encabezado Mobile -->
+  <!-- Mobile header -->
   <div class="md:hidden mb-5">
-    <div class="flex items-center gap-2 mb-1.5">
+    <div class="flex items-center gap-2 mb-1.5 -ml-3">
       <span class="w-1 h-5 rounded-full bg-amber-500"></span>
-      <h3 class="font-headline text-lg font-bold text-light-primary">
+      <h2 class="font-headline text-lg font-bold text-light-primary">
         Servicios populares
-      </h3>
+      </h2>
     </div>
 
-    <p class="text-sm text-slate-500 ml-3">
+    <p class="text-sm text-slate-500">
       Mantención y reparación para tu vehículo.
     </p>
   </div>
 
-  <!-- Encabezado Desktop -->
-  <div class="hidden md:block mb-12">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
-      <div class="max-w-xl space-y-2">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 text-accent font-code text-[12px] uppercase font-bold tracking-wider rounded-full border border-amber-200">
-          <Icon name="tune" class="text-[16px]" />
-          Servicios
-        </span>
-
-        <h2 class="font-headline text-[28px] md:text-[36px] text-light-primary font-bold">
+  <!-- Desktop header -->
+  <div class="hidden md:flex md:items-start md:justify-between gap-4 mb-12">
+    <div class="max-w-xl">
+      <div class="flex items-center gap-2 mb-1.5 -ml-3">
+        <span class="w-1 h-5 rounded-full bg-amber-500"></span>
+        <h2 class="font-headline text-2xl font-bold text-light-primary">
           Soluciones mecánicas claras y garantizadas
         </h2>
-
-        <p class="text-steel text-body-md">
-          Atención integral para vehículos particulares con repuestos de calidad
-          probada y explicación transparente.
-        </p>
       </div>
 
-      <a
-        href={`https://wa.me/56953377432?text=${encodeURIComponent("Hola Gabriel, quisiera consultar por un servicio")}`}
-        class="text-body-sm font-semibold text-accent hover:text-accent-hover inline-flex items-center gap-1"
-      >
-        <span>Consultar por otro trabajo específico</span>
-        <Icon name="arrow_forward" class="text-[18px]" />
-      </a>
+      <p class="text-steel text-body-md">
+        Atención integral para vehículos particulares con repuestos de calidad
+        probada y explicación transparente.
+      </p>
     </div>
+
+    <a
+      href={`https://wa.me/56953377432?text=${encodeURIComponent("Hola Gabriel, quisiera consultar por un servicio")}`}
+      class="text-body-sm font-semibold text-accent hover:text-accent-hover inline-flex items-center gap-1 shrink-0"
+    >
+      <span>Consultar por otro trabajo específico</span>
+      <Icon name="arrow_forward" class="text-lg" />
+    </a>
   </div>
 
-  <!-- Tarjetas de Servicios -->
+  <!-- Service cards -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
     {services.map((service) => (
       <ServiceCard {...service} />

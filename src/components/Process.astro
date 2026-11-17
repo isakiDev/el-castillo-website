@@ -1,5 +1,5 @@
 ---
-import Icon from "./Icon.astro";
+import Icon from"./Icon.astro";
 ---
 
 <section
@@ -7,16 +7,19 @@ import Icon from "./Icon.astro";
   class="md:py-16 md:bg-slate-50/70 md:border-b md:border-slate-200/80"
 >
   <!-- Mobile -->
-  <div class="md:hidden bg-white border border-slate-200 rounded-2xl p-5 shadow-xs space-y-4">
-    <div class="text-center space-y-1">
-      <span class="font-code text-[11px] uppercase text-accent font-bold tracking-wider">
-        Flujo de Trabajo
-      </span>
-      <h3 class="font-headline text-[16px] font-bold text-light-primary">
+  <div class="md:hidden mb-5">
+    <div class="flex items-center gap-2 mb-1.5 -ml-3">
+      <span class="w-1 h-5 rounded-full bg-amber-500"></span>
+      <h2 class="font-headline text-lg font-bold text-light-primary">
         Cómo resolvemos el problema de tu auto
-      </h3>
+      </h2>
     </div>
+    <p class="text-sm text-slate-500">
+      Un proceso simple de 3 pasos sin sorpresas.
+    </p>
+  </div>
 
+  <div class="md:hidden bg-white border border-slate-200 rounded-2xl p-5 shadow-xs">
     <div class="relative pl-6 space-y-6 pt-2">
       <div class="absolute left-2.5 top-3 bottom-3 w-0.5 pointer-events-none">
         <svg
@@ -38,42 +41,42 @@ import Icon from "./Icon.astro";
       </div>
 
       <div class="relative pl-3.5">
-        <div class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-[11px] ring-4 ring-white">
+        <div class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-xs ring-4 ring-white">
           1
         </div>
         <div>
-          <h4 class="font-headline text-[13px] font-bold text-light-primary">
+          <h3 class="font-headline text-sm font-bold text-light-primary">
             Consulta por WhatsApp
-          </h4>
-          <p class="text-[12px] text-steel mt-0.5 leading-snug">
-            Me detallás el síntoma y te paso disponibilidad con costo estimado.
+          </h3>
+          <p class="text-xs text-steel mt-0.5 leading-snug">
+            Me detallas el síntoma y te paso disponibilidad con costo estimado.
           </p>
         </div>
       </div>
 
       <div class="relative pl-3.5">
-        <div class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-[11px] ring-4 ring-white">
+        <div class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-xs ring-4 ring-white">
           2
         </div>
         <div>
-          <h4 class="font-headline text-[13px] font-bold text-light-primary">
+          <h3 class="font-headline text-sm font-bold text-light-primary">
             Atención en Casa o Taller
-          </h4>
-          <p class="text-[12px] text-steel mt-0.5 leading-snug">
-            Coordinamos si voy a tu domicilio o si lo traés al taller.
+          </h3>
+          <p class="text-xs text-steel mt-0.5 leading-snug">
+            Coordinamos si voy a tu domicilio o si lo traes al taller.
           </p>
         </div>
       </div>
 
       <div class="relative pl-3.5">
-        <div class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-[11px] ring-4 ring-white">
+        <div class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-xs ring-4 ring-white">
           3
         </div>
         <div>
-          <h4 class="font-headline text-[13px] font-bold text-light-primary">
+          <h3 class="font-headline text-sm font-bold text-light-primary">
             Transparencia y Confianza
-          </h4>
-          <p class="text-[12px] text-steel mt-0.5 leading-snug">
+          </h3>
+          <p class="text-xs text-steel mt-0.5 leading-snug">
             Explicación detallada del trabajo realizado y de los repuestos
             utilizados.
           </p>
@@ -83,14 +86,14 @@ import Icon from "./Icon.astro";
   </div>
 
   <!-- Desktop -->
-  <div class="hidden md:block max-w-[1120px] mx-auto px-6">
-    <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
-      <span class="font-code text-[12px] uppercase text-accent font-bold tracking-wider">
-        Flujo de Trabajo
-      </span>
-      <h2 class="font-headline text-[28px] md:text-[36px] text-light-primary font-bold">
-        Cómo resolvemos el problema de tu auto
-      </h2>
+  <div class="hidden md:block max-w-280 mx-auto px-6">
+    <div class="max-w-xl mb-12">
+      <div class="flex items-center gap-2 mb-1.5 -ml-3">
+        <span class="w-1 h-5 rounded-full bg-amber-500"></span>
+        <h2 class="font-headline text-2xl font-bold text-light-primary">
+          Cómo resolvemos el problema de tu auto
+        </h2>
+      </div>
       <p class="text-steel text-body-md">
         Un proceso simple de 3 pasos sin sorpresas, demoras ni costos ocultos.
       </p>
@@ -113,11 +116,11 @@ import Icon from "./Icon.astro";
         <div class="w-12 h-12 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-lg mb-4 ring-4 ring-slate-100 group-hover:bg-accent transition-colors">
           1
         </div>
-        <h3 class="font-headline font-bold text-[17px] text-light-primary mb-2">
+        <h3 class="font-headline font-bold text-lg text-light-primary mb-2">
           Consulta por WhatsApp
         </h3>
         <p class="text-steel text-body-sm leading-relaxed">
-          Me detallás el síntoma y te paso disponibilidad con costo estimado.
+          Me detallas el síntoma y te paso disponibilidad con costo estimado.
         </p>
       </div>
 
@@ -125,11 +128,11 @@ import Icon from "./Icon.astro";
         <div class="w-12 h-12 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-lg mb-4 ring-4 ring-slate-100 group-hover:bg-accent transition-colors">
           2
         </div>
-        <h3 class="font-headline font-bold text-[17px] text-light-primary mb-2">
+        <h3 class="font-headline font-bold text-lg text-light-primary mb-2">
           Atención en Casa o Taller
         </h3>
         <p class="text-steel text-body-sm leading-relaxed">
-          Coordinamos si voy a tu domicilio o si lo traés al taller.
+          Coordinamos si voy a tu domicilio o si lo traes al taller.
         </p>
       </div>
 
@@ -137,7 +140,7 @@ import Icon from "./Icon.astro";
         <div class="w-12 h-12 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-lg mb-4 ring-4 ring-slate-100 group-hover:bg-accent transition-colors">
           3
         </div>
-        <h3 class="font-headline font-bold text-[17px] text-light-primary mb-2">
+        <h3 class="font-headline font-bold text-lg text-light-primary mb-2">
           Transparencia y Confianza
         </h3>
         <p class="text-steel text-body-sm leading-relaxed">
