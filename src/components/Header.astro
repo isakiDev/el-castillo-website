@@ -2,8 +2,8 @@
 import Icon from "./Icon.astro";
 ---
 
-<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md md:backdrop-blur-none border-b border-slate-200/80 px-4 md:px-0 py-3 md:py-0 shadow-xs md:shadow-none">
-  <div class="max-w-[1120px] mx-auto md:px-6 md:py-6 flex items-center justify-between gap-4">
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md md:backdrop-blur-none border-b border-slate-200/80 px-4 md:px-0 py-3 md:py-0 shadow-xs md:shadow-none relative">
+  <div class="max-w-280 mx-auto md:px-6 md:py-6 flex items-center justify-between gap-4">
     <div class="flex items-center gap-2.5">
       <img
         src="https://i.pinimg.com/236x/90/9c/a1/909ca15303f4a1f0dd0a03101856011d.jpg"
@@ -13,12 +13,12 @@ import Icon from "./Icon.astro";
 
       <div>
         <div class="flex items-center gap-1">
-          <h1 class="font-headline text-[15px] font-bold text-light-primary leading-tight">
+          <span class="font-headline text-sm font-bold text-light-primary leading-tight">
             Mecánica el Castillo
-          </h1>
-          <Icon name="verified" class="text-[15px] text-blue-600" />
+          </span>
+          <Icon name="verified" class="text-sm text-blue-600" />
         </div>
-        <p class="text-[12px] text-steel">
+        <p class="text-xs text-steel">
           Taller en Los Arregladores • A Domicilio
         </p>
       </div>
@@ -41,5 +41,60 @@ import Icon from "./Icon.astro";
         Contacto
       </a>
     </nav>
+
+    <button
+      id="mobile-menu-button"
+      type="button"
+      class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-light-primary"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="sr-only">Menú</span>
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
   </div>
+
+  <nav
+    id="mobile-menu"
+    class="md:hidden hidden absolute inset-x-0 top-full bg-white border-b border-slate-200 shadow-lg px-4 py-3"
+    aria-label="Navegación móvil"
+  >
+    <div class="flex flex-col gap-1 text-body-sm text-steel">
+      <a href="#servicios" class="px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-light-primary transition-colors">
+        Servicios
+      </a>
+      <a href="#proceso" class="px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-light-primary transition-colors">
+        Cómo trabajo
+      </a>
+      <a href="#ubicacion" class="px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-light-primary transition-colors">
+        Ubicación
+      </a>
+      <a href="#contacto" class="px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-light-primary transition-colors">
+        Contacto
+      </a>
+    </div>
+  </nav>
+
+  <script>
+    const btn = document.getElementById("mobile-menu-button");
+    const menu = document.getElementById("mobile-menu");
+    if (btn && menu) {
+      btn.addEventListener("click", () => {
+        const isOpen = !menu.classList.contains("hidden");
+        menu.classList.toggle("hidden");
+        btn.setAttribute("aria-expanded", String(!isOpen));
+      });
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+          btn.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+  </script>
 </header>
