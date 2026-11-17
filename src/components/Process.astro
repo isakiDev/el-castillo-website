@@ -1,74 +1,146 @@
 ---
+import Icon from "./Icon.astro";
 ---
 
-<section class="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs space-y-4">
-  <div class="text-center space-y-1">
-    <span class="font-code text-[11px] uppercase text-accent font-bold tracking-wider">
-      Flujo de Trabajo
-    </span>
-    <h3 class="font-headline text-[16px] font-bold text-light-primary">
-      Cómo resolvemos el problema de tu auto
-    </h3>
-  </div>
-
-  <div class="relative pl-6 space-y-6 pt-2">
-    <div class="absolute left-2.5 top-3 bottom-3 w-0.5 pointer-events-none">
-      <svg
-        class="h-full w-full"
-        preserveAspectRatio="none"
-        viewBox="0 0 2 100"
-        fill="none"
-      >
-        <line
-          x1="1"
-          y1="0"
-          x2="1"
-          y2="100"
-          stroke="#CBD5E1"
-          stroke-width="2"
-          stroke-dasharray="3 3"
-        />
-      </svg>
+<section
+  id="proceso"
+  class="md:py-16 md:bg-slate-50/70 md:border-b md:border-slate-200/80"
+>
+  <!-- Mobile -->
+  <div class="md:hidden bg-white border border-slate-200 rounded-2xl p-5 shadow-xs space-y-4">
+    <div class="text-center space-y-1">
+      <span class="font-code text-[11px] uppercase text-accent font-bold tracking-wider">
+        Flujo de Trabajo
+      </span>
+      <h3 class="font-headline text-[16px] font-bold text-light-primary">
+        Cómo resolvemos el problema de tu auto
+      </h3>
     </div>
 
-    <div class="relative pl-2">
-      <div class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-[11px] ring-4 ring-white">
-        1
+    <div class="relative pl-6 space-y-6 pt-2">
+      <div class="absolute left-2.5 top-3 bottom-3 w-0.5 pointer-events-none">
+        <svg
+          class="h-full w-full"
+          preserveAspectRatio="none"
+          viewBox="0 0 2 100"
+          fill="none"
+        >
+          <line
+            x1="1"
+            y1="0"
+            x2="1"
+            y2="100"
+            stroke="#CBD5E1"
+            stroke-width="2"
+            stroke-dasharray="3 3"
+          />
+        </svg>
       </div>
 
-      <div>
-        <h4 class="font-headline text-[13px] font-bold text-light-primary">
+      <div class="relative pl-3.5">
+        <div class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-[11px] ring-4 ring-white">
+          1
+        </div>
+        <div>
+          <h4 class="font-headline text-[13px] font-bold text-light-primary">
+            Consulta por WhatsApp
+          </h4>
+          <p class="text-[12px] text-steel mt-0.5 leading-snug">
+            Me detallás el síntoma y te paso disponibilidad con costo estimado.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative pl-3.5">
+        <div class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-[11px] ring-4 ring-white">
+          2
+        </div>
+        <div>
+          <h4 class="font-headline text-[13px] font-bold text-light-primary">
+            Atención en Casa o Taller
+          </h4>
+          <p class="text-[12px] text-steel mt-0.5 leading-snug">
+            Coordinamos si voy a tu domicilio o si lo traés al taller.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative pl-3.5">
+        <div class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-[11px] ring-4 ring-white">
+          3
+        </div>
+        <div>
+          <h4 class="font-headline text-[13px] font-bold text-light-primary">
+            Transparencia y Confianza
+          </h4>
+          <p class="text-[12px] text-steel mt-0.5 leading-snug">
+            Explicación detallada del trabajo realizado y de los repuestos
+            utilizados.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Desktop -->
+  <div class="hidden md:block max-w-[1120px] mx-auto px-6">
+    <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
+      <span class="font-code text-[12px] uppercase text-accent font-bold tracking-wider">
+        Flujo de Trabajo
+      </span>
+      <h2 class="font-headline text-[28px] md:text-[36px] text-light-primary font-bold">
+        Cómo resolvemos el problema de tu auto
+      </h2>
+      <p class="text-steel text-body-md">
+        Un proceso simple de 3 pasos sin sorpresas, demoras ni costos ocultos.
+      </p>
+    </div>
+
+    <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="hidden md:block absolute top-12 left-1/6 right-1/6 -z-0 pointer-events-none">
+        <svg class="w-full h-8" viewBox="0 0 700 24" fill="none">
+          <path
+            d="M 30 12 L 320 12 M 380 12 L 670 12"
+            stroke="#CBD5E1"
+            stroke-width="2"
+            stroke-dasharray="6 6"
+          />
+          <circle cx="350" cy="12" r="3" fill="#D97706"></circle>
+        </svg>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-6 relative shadow-xs flex flex-col items-center text-center group hover:border-accent transition-colors">
+        <div class="w-12 h-12 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-lg mb-4 ring-4 ring-slate-100 group-hover:bg-accent transition-colors">
+          1
+        </div>
+        <h3 class="font-headline font-bold text-[17px] text-light-primary mb-2">
           Consulta por WhatsApp
-        </h4>
-        <p class="text-[12px] text-steel mt-0.5 leading-snug">
+        </h3>
+        <p class="text-steel text-body-sm leading-relaxed">
           Me detallás el síntoma y te paso disponibilidad con costo estimado.
         </p>
       </div>
-    </div>
 
-    <div class="relative pl-2">
-      <div class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-[11px] ring-4 ring-white">
-        2
-      </div>
-      <div>
-        <h4 class="font-headline text-[13px] font-bold text-light-primary">
+      <div class="bg-white border border-slate-200 rounded-xl p-6 relative shadow-xs flex flex-col items-center text-center group hover:border-accent transition-colors">
+        <div class="w-12 h-12 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-lg mb-4 ring-4 ring-slate-100 group-hover:bg-accent transition-colors">
+          2
+        </div>
+        <h3 class="font-headline font-bold text-[17px] text-light-primary mb-2">
           Atención en Casa o Taller
-        </h4>
-        <p class="text-[12px] text-steel mt-0.5 leading-snug">
+        </h3>
+        <p class="text-steel text-body-sm leading-relaxed">
           Coordinamos si voy a tu domicilio o si lo traés al taller.
         </p>
       </div>
-    </div>
 
-    <div class="relative pl-2">
-      <div class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-[11px] ring-4 ring-white">
-        3
-      </div>
-      <div>
-        <h4 class="font-headline text-[13px] font-bold text-light-primary">
+      <div class="bg-white border border-slate-200 rounded-xl p-6 relative shadow-xs flex flex-col items-center text-center group hover:border-accent transition-colors">
+        <div class="w-12 h-12 rounded-full bg-light-primary text-white flex items-center justify-center font-headline font-bold text-lg mb-4 ring-4 ring-slate-100 group-hover:bg-accent transition-colors">
+          3
+        </div>
+        <h3 class="font-headline font-bold text-[17px] text-light-primary mb-2">
           Transparencia y Confianza
-        </h4>
-        <p class="text-[12px] text-steel mt-0.5 leading-snug">
+        </h3>
+        <p class="text-steel text-body-sm leading-relaxed">
           Explicación detallada del trabajo realizado y de los repuestos
           utilizados.
         </p>
