@@ -2,24 +2,24 @@
 import Icon from "./Icon.astro";
 ---
 
-<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md md:backdrop-blur-none border-b border-slate-200/80 px-4 md:px-0 py-3 md:py-0 shadow-xs md:shadow-none relative">
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md md:backdrop-blur-none border-b border-slate-200/80 px-4 md:px-0 py-3 md:py-0 shadow-xs md:shadow-none">
   <div class="max-w-280 mx-auto md:px-6 md:py-6 flex items-center justify-between gap-4">
     <div class="flex items-center gap-2.5">
       <img
-        src="https://i.pinimg.com/236x/90/9c/a1/909ca15303f4a1f0dd0a03101856011d.jpg"
-        alt="Mecánica el Castillo"
+        src="/logo.png"
+        alt="Mecánica El Castillo"
         class="w-10 h-10 rounded-full object-cover border border-slate-200 shadow-xs"
       />
 
       <div>
         <div class="flex items-center gap-1">
           <span class="font-headline text-sm font-bold text-light-primary leading-tight">
-            Mecánica el Castillo
+            Mecánica El Castillo
           </span>
           <Icon name="verified" class="text-sm text-blue-600" />
         </div>
         <p class="text-xs text-steel">
-          Taller en Los Arregladores • A Domicilio
+          San Fernando • A Domicilio
         </p>
       </div>
     </div>
@@ -61,20 +61,20 @@ import Icon from "./Icon.astro";
 
   <nav
     id="mobile-menu"
-    class="md:hidden hidden absolute inset-x-0 top-full bg-white border-b border-slate-200 shadow-lg px-4 py-3"
+    class="md:hidden hidden absolute inset-x-0 top-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-lg px-4 py-4"
     aria-label="Navegación móvil"
   >
     <div class="flex flex-col gap-1 text-body-sm text-steel">
-      <a href="#servicios" class="px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-light-primary transition-colors">
+      <a href="#servicios" class="flex items-center px-3 py-2.5 rounded-lg text-light-primary font-medium hover:bg-slate-50 transition-colors">
         Servicios
       </a>
-      <a href="#proceso" class="px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-light-primary transition-colors">
+      <a href="#proceso" class="flex items-center px-3 py-2.5 rounded-lg text-light-primary font-medium hover:bg-slate-50 transition-colors">
         Cómo trabajo
       </a>
-      <a href="#ubicacion" class="px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-light-primary transition-colors">
+      <a href="#ubicacion" class="flex items-center px-3 py-2.5 rounded-lg text-light-primary font-medium hover:bg-slate-50 transition-colors">
         Ubicación
       </a>
-      <a href="#contacto" class="px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-light-primary transition-colors">
+      <a href="#contacto" class="flex items-center px-3 py-2.5 rounded-lg text-light-primary font-medium hover:bg-slate-50 transition-colors">
         Contacto
       </a>
     </div>
