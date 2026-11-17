@@ -18,10 +18,10 @@ import Icon from "../components/Icon.astro";
     <Process />
     <Location />
     <Trust />
-    <section id="contacto" class="hidden md:block py-12 text-center">
+    <section id="contacto" class="py-8 md:py-12 text-center">
       <div class="max-w-xl mx-auto space-y-6">
         <h2 class="font-headline text-2xl font-bold text-light-primary tracking-tight">
-          ¿Quieres consultar por tu vehículo?
+          ¿Quieres que revise tu vehículo?
         </h2>
         <p class="text-steel text-body-md">
           Escribime detallando marca, modelo, año y el síntoma o servicio que
@@ -32,14 +32,14 @@ import Icon from "../components/Icon.astro";
             href={`https://wa.me/56953377432?text=${encodeURIComponent("Hola Gabriel, quisiera consultar por mi auto.")}`}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-whatsapp hover:bg-whatsapp-hover text-white font-headline text-sm font-bold rounded shadow-xs transition-colors"
+            class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-whatsapp hover:bg-whatsapp-hover text-white font-headline text-sm font-bold rounded-lg shadow-xs transition-colors"
           >
             <Icon name="chat" class="text-xl" />
             <span>Escribir por WhatsApp</span>
           </a>
           <a
             href="tel:+56953377432"
-            class="inline-flex items-center justify-center gap-2 px-6 py-4 border border-slate-300 hover:border-slate-800 text-light-primary font-headline text-sm font-bold rounded transition-colors"
+            class="inline-flex items-center justify-center gap-2 px-6 py-4 border border-slate-300 hover:border-slate-800 text-light-primary font-headline text-sm font-bold rounded-lg transition-colors"
           >
             <Icon name="call" class="text-xl text-steel" />
             <span>Llamar al +56 9 5337 7432</span>
