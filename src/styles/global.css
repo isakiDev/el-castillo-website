@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
@@ -17,10 +15,8 @@ html {
   --color-light-secondary: #334155;
   --color-light-on-surface: #0F172A;
 
-  --font-display: "Archivo", sans-serif;
   --font-headline: "Archivo", sans-serif;
   --font-body: "Commissioner", sans-serif;
-  --font-label: "Commissioner", sans-serif;
   --font-code: "Spline Sans Mono", monospace;
 
   --text-body-sm: 14px;
