@@ -1,0 +1,25 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-slate-200/80 bg-white">
+  <div class="max-w-280 mx-auto px-6 py-7 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="text-sm text-steel">
+      © {year}
+      <span class="font-semibold text-slate-700"> Mecánica El Castillo</span>
+    </p>
+
+    <p class="flex items-center gap-1.5 text-sm text-steel">
+      Diseñado y desarrollado por
+      <a
+        href="https://isakidev.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="font-bold text-slate-800 hover:text-primary transition-colors duration-200"
+      >
+        isakidev
+      </a>
+      <span class="text-primary">✦</span>
+    </p>
+  </div>
+</footer>

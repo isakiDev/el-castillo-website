@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title?: string;
@@ -20,14 +21,19 @@ const ogImage = new URL(image, siteUrl);
 
 <!doctype html>
 <html lang="es">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="generator" content={Astro.generator} />    <title>{title}</title>
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href={canonicalURL} />    <meta name="theme-color" content="#FAFAFA" />    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="theme-color" content="#FAFAFA" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />    <meta property="og:type" content="website" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_CL" />
     <meta property="og:site_name" content="El Castillo — Mecánica Automotriz" />
     <meta property="og:title" content={title} />
@@ -37,10 +43,12 @@ const ogImage = new URL(image, siteUrl);
     <meta
       property="og:image:alt"
       content="El Castillo — Servicios de Mecánica Automotriz"
-    />    <meta name="twitter:card" content="summary_large_image" />
+    />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta name="twitter:image" content={ogImage} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
@@ -49,7 +57,9 @@ const ogImage = new URL(image, siteUrl);
     />
   </head>
 
-  <body class="bg-[#FAFAFA] text-light-on-surface font-body min-h-screen flex flex-col antialiased selection:bg-light-primary selection:text-white pb-28">
+  <body class="bg-[#FAFAFA] text-light-on-surface font-body min-h-screen flex flex-col antialiased selection:bg-light-primary selection:text-white pb-16">
     <slot />
+
+    <Footer />
   </body>
 </html>
